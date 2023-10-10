@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
     qmlRegisterSingletonType<FGroundControlQmlGlobal>("FGroundControl", 1, 0, "FGroundControl", fgroundcontrolQmlGlobalSingletonFactory);
 
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/src/main.qml")));
+    engine.addImportPath("qrc:/qml");
+    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
 
 
     return app.exec();

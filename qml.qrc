@@ -1,6 +1,15 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="/qml">
+        <file alias="FlightDisplay/FlyView.qml">src/FlightDisplay/FlyView.qml</file>
+        <file alias="FlightDisplay/qmldir">src/FlightDisplay/qmldir</file>
+        <file alias="main.qml">src/main.qml</file>
+        <file alias="FlightDisplay/FlyViewMap.qml">src/FlightDisplay/FlyViewMap.qml</file>
+        <file alias="FlightDisplay/FlyViewVideo.qml">src/FlightDisplay/FlyViewVideo.qml</file>
+    </qresource>
+    <qresource prefix="/html">
         <file>map.html</file>
-        <file>src/main.qml</file>
+    </qresource>
+    <qresource prefix="/res">
+        <file alias="NoVideoBackground.jpg">res/NoVideoBackground.jpg</file>
     </qresource>
 </RCC>
