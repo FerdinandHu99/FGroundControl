@@ -4,6 +4,7 @@ import QtQuick.Controls 2.15
 import QtWebEngine 1.9
 
 import FGroundControl 1.0
+import FlightDisplay 1.0
 
 ApplicationWindow {
     width: Math.min(250 * Screen.pixelDensity, Screen.width)
@@ -18,9 +19,7 @@ ApplicationWindow {
         height: 40
     }
 
-    WebEngineView {
-        id: webView
-        anchors.fill: parent // 填充整个父项
-        url: "file:///D:/Qt_Projects/FGroundControl/map.html"
+    FlyView {
+
     }
 }

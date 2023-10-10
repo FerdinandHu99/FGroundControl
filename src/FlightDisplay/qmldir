@@ -1,0 +1,6 @@
+Module FlightDisplay
+
+FlyView      1.0 FlyView.qml
+FlyViewMap   1.0 FlyViewMap.qml
+FlyViewVideo 1.0 FlyViewVideo.qml
+

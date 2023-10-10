@@ -11,10 +11,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON) #要求CMake强制使用这个标准
 
 find_package(Qt5 REQUIRED COMPONENTS Core Quick WebEngine) #寻找Qt5的Core、Quick、WebEngine模块,找不到将报错（REQUIRED关键字）
 
-aux_source_directory(src PROJECT_SOURCES) #查找src目录中的所有源文件，并将它们存储在"PROJECT_SOURCES"变量中
+#aux_source_directory(src PROJECT_SOURCES) #查找src目录中的所有源文件，并将它们存储在"PROJECT_SOURCES"变量中
 
 #include_directories(src)
 file(GLOB_RECURSE PROJECT_HEADERS "src/*.h")
+file(GLOB_RECURSE PROJECT_SOURCES "src/*.cpp")
+
 #link_directories(
 #    ${LIBS_PATH}/ffmpeg/lib
 #)
@@ -39,14 +41,14 @@ target_include_directories(FGroundControl PRIVATE include)
 
 target_link_libraries(FGroundControl #指定了可执行文件依赖的Qt模块
     PRIVATE Qt5::Core Qt5::Quick Qt5::WebEngine
-    ${LIBS_PATH}/ffmpeg/lib/avcodec.lib
-    ${LIBS_PATH}/ffmpeg/lib/avdevice.lib
-    ${LIBS_PATH}/ffmpeg/lib/avfilter.lib
-    ${LIBS_PATH}/ffmpeg/lib/avformat.lib
-    ${LIBS_PATH}/ffmpeg/lib/avutil.lib
-    ${LIBS_PATH}/ffmpeg/lib/postproc.lib
-    ${LIBS_PATH}/ffmpeg/lib/swresample.lib
-    ${LIBS_PATH}/ffmpeg/lib/swscale.lib
+    ${LIBS_PATH}/ffmpeg/lib/libavcodec.dll.a
+    ${LIBS_PATH}/ffmpeg/lib/libavdevice.dll.a
+    ${LIBS_PATH}/ffmpeg/lib/libavfilter.dll.a
+    ${LIBS_PATH}/ffmpeg/lib/libavformat.dll.a
+    ${LIBS_PATH}/ffmpeg/lib/libavutil.dll.a
+    ${LIBS_PATH}/ffmpeg/lib/libpostproc.dll.a
+    ${LIBS_PATH}/ffmpeg/lib/libswresample.dll.a
+    ${LIBS_PATH}/ffmpeg/lib/libswscale.dll.a
 )
 
 #set_target_properties(FGroundControl PROPERTIES
