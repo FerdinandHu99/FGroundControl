@@ -1,16 +1,28 @@
 import QtQuick 2.15
-
+import Controls 1.0
 
 Item {
     id: _root
     anchors.fill: parent
+    property bool   _mainWindowIsMap: mapControl.pipState.state === mapControl.pipState.fullState
 
     FlyViewMap {
-        anchors.fill: parent;
+        id: mapControl
     }
 
     FlyViewVideo {
-        anchors.left: parent.left
-        anchors.bottom: parent.bottom
+        id: videoControl
+    }
+
+    FGCPipOverlay {
+        id:                     _pipOverlay
+        anchors.left:           parent.left
+        anchors.bottom:         parent.bottom
+        anchors.margins:        8
+        item1:                  mapControl
+        item2:                  videoControl
+        fullZOrder:             0
+        pipZOrder:              1
+        show:                   true
     }
 }

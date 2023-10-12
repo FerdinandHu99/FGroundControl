@@ -5,11 +5,18 @@
         <file alias="main.qml">src/main.qml</file>
         <file alias="FlightDisplay/FlyViewMap.qml">src/FlightDisplay/FlyViewMap.qml</file>
         <file alias="FlightDisplay/FlyViewVideo.qml">src/FlightDisplay/FlyViewVideo.qml</file>
+        <file alias="Controls/FGCPipOverlay.qml">src/Controls/FGCPipOverlay.qml</file>
+        <file alias="Controls/qmldir">src/Controls/qmldir</file>
+        <file alias="Controls/FGCPipState.qml">src/Controls/FGCPipState.qml</file>
     </qresource>
     <qresource prefix="/html">
         <file>map.html</file>
     </qresource>
     <qresource prefix="/res">
         <file alias="NoVideoBackground.jpg">res/NoVideoBackground.jpg</file>
+        <file alias="PiP.svg">res/PiP.svg</file>
+        <file alias="pipHide.svg">res/pipHide.svg</file>
+        <file alias="pipResize.svg">res/pipResize.svg</file>
+        <file alias="buttonRight.svg">res/buttonRight.svg</file>
     </qresource>
 </RCC>
