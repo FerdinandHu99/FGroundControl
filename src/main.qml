@@ -7,10 +7,10 @@ import FGroundControl 1.0
 import FlightDisplay 1.0
 
 ApplicationWindow {
-    width: Math.min(250 * Screen.pixelDensity, Screen.width)
-    height: Math.min(150 * Screen.pixelDensity, Screen.height)
-    visible: true
-    title: qsTr("FGroundControl")
+    width:          Math.min(250 * Screen.pixelDensity, Screen.width)
+    height:         Math.min(150 * Screen.pixelDensity, Screen.height)
+    visible:        true
+    title:          qsTr("FGroundControl")
     Component.onCompleted: {
         console.log(width, height)
         console.log(FGroundControl.appName)

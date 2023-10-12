@@ -4,7 +4,6 @@ import Controls 1.0
 Item {
     id: _root
     anchors.fill: parent
-    property bool   _mainWindowIsMap: mapControl.pipState.state === mapControl.pipState.fullState
 
     FlyViewMap {
         id: mapControl
