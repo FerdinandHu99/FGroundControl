@@ -26,4 +26,9 @@ Item {
         }
     }
 
+    Image {
+        anchors.fill: parent
+        source: "qrc:/res/NoVideoBackground.jpg"
+    }
+
 }
